@@ -2,9 +2,26 @@
 
 import prisma from "@/lib/db";
 
-export const getAllSubject = async () => {
-  const subjects = await prisma.subject.findMany();
-  return subjects;
+export const getAllSubject = async (search?: string) => {  
+  if (!search) return await prisma.subject.findMany();
+  return await prisma.subject.findMany({
+    where: {
+      OR: [
+        {
+          name: {
+            contains: search,
+            mode: "insensitive",
+          },
+        },
+        {
+          description: {
+            contains: search,
+            mode: "insensitive",
+          },
+        },
+      ],
+    },
+  });
 };
 
 export const getSubject = async (subjectId: string) => {
