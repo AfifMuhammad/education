@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,52 +6,23 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import EditSubjectForm from "./_components/edit-subject-form";
+import { getSubject } from "@/actions/subject/show";
+import EditSubjectImageForm from "./_components/edit-subject-image-form";
 
-export default function SubjectPage({ params }: { params: { id: string } }) {
+interface Props {
+  params: { id: string };
+}
+export default async function SubjectPage({ params }: Props) {
+  const subject = await getSubject(params.id);
+
+  if (!subject) return <div>Subject not found</div>;
   return (
     <div className="grid gap-6">
-      <Card x-chunk="dashboard-04-chunk-1">
-        <CardHeader>
-          <CardTitle>Store Name</CardTitle>
-          <CardDescription>
-            Used to identify your store in the marketplace.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form>
-            <Input placeholder="Store Name" />
-          </form>
-        </CardContent>
-        <CardFooter className="border-t px-6 py-4">
-          <Button>Save</Button>
-        </CardFooter>
-      </Card>
-      <Card x-chunk="dashboard-04-chunk-2">
-        <CardHeader>
-          <CardTitle>Plugins Directory</CardTitle>
-          <CardDescription>
-            The directory within your project, in which your plugins are
-            located.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form className="flex flex-col gap-4">
-            <Input placeholder="Project Name" defaultValue="/content/plugins" />
-            <div className="flex items-center space-x-2">
-              <label
-                htmlFor="include"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              >
-                Allow administrators to change the directory.
-              </label>
-            </div>
-          </form>
-        </CardContent>
-        <CardFooter className="border-t px-6 py-4">
-          <Button>Save</Button>
-        </CardFooter>
-      </Card>
+      <EditSubjectForm subject={subject} />
+      <EditSubjectImageForm subject={subject} />
     </div>
   );
 }

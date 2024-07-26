@@ -8,16 +8,20 @@ import { ImageIcon, LoaderCircle, PencilIcon } from "lucide-react";
 import React from "react";
 
 type AvatarUploadProps = {
+  defaultValue?: string;
   isUploading?: boolean;
   onChange: (value: File[]) => void;
 };
 
 export function AvatarUpload({
+  defaultValue,
   isUploading = false,
   onChange,
 }: AvatarUploadProps) {
   const inputRef = React.useRef<HTMLInputElement>(null);
-  const [imageSrc, setImageSrc] = React.useState<string>();
+  const [imageSrc, setImageSrc] = React.useState<string | undefined>(
+    defaultValue
+  );
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
