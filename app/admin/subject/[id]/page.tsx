@@ -1,21 +1,9 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import EditSubjectForm from "./_components/edit-subject-form";
 import { getSubject } from "@/actions/subject/show";
 import EditSubjectImageForm from "./_components/edit-subject-image-form";
+import { PageProps } from "@/types";
 
-interface Props {
-  params: { id: string };
-}
-export default async function SubjectPage({ params }: Props) {
+export default async function SubjectPage({ params }: PageProps) {
   const subject = await getSubject(params.id);
 
   if (!subject) return <div>Subject not found</div>;

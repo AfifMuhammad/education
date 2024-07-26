@@ -37,3 +37,7 @@ declare module "next-auth/jwt" {
     user: Session;
   }
 }
+
+export interface PageProps {
+  params: { id: string };
+}

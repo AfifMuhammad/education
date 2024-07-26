@@ -20,3 +20,7 @@ export const UpdateSubjectImage = z.object({
   id: z.string({ required_error: "Id is required" }),
   image: z.string({ required_error: "Image is required" }),
 });
+
+export const DeleteSubject = z.object({
+  id: z.string({ required_error: "Id is required" }),
+});

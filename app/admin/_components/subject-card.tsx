@@ -14,6 +14,7 @@ export default function SubjectCard({ subject }: { subject: Subject }) {
           width={200}
           height={200}
           className="absolute inset-0 w-full h-full object-cover"
+          priority
         />
       ) : null}
       <div className="z-10 w-full bg-white/5 backdrop-blur-[3px]">

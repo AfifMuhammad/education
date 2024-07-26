@@ -27,7 +27,7 @@ export default async function SubjectLayout({ children, params }: Props) {
           <Link href="#">Lessons</Link>
           <Link href="#">Quiz</Link>
           <Link href="#">VLab</Link>
-          <Link href="#">Advanced</Link>
+          <Link href={`/admin/subject/${subject.id}/advanced`}>Advanced</Link>
         </nav>
         {children}
       </div>
