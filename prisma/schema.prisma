@@ -32,40 +32,26 @@ model Subject {
     createdAt   DateTime  @default(now()) @map("created_at")
     updatedAt   DateTime? @updatedAt @map("updated_at")
 
-    lessons Lesson[]
     quiz    Quiz?    @relation(fields: [quizId], references: [id])
+    lessons Lesson[]
 
     @@map("subject")
 }
 
 model Lesson {
-    id          String    @id @default(cuid())
-    subjectId   String    @map("subject_id")
-    name        String
-    image       String?
-    description String?
-    quizId      String?   @map("quiz_id")
-    createdAt   DateTime  @default(now()) @map("created_at")
-    updatedAt   DateTime? @updatedAt @map("updated_at")
-
-    subject  Subject   @relation(fields: [subjectId], references: [id])
-    chapters Chapter[]
-    quiz     Quiz?     @relation(fields: [quizId], references: [id])
-
-    @@map("lesson")
-}
-
-model Chapter {
     id        String    @id @default(cuid())
-    lessonId  String    @map("lesson_id")
+    subjectId String    @map("subject_id")
     title     String
+    image     String?
     content   String    @db.Text
+    quizId    String?   @map("quiz_id")
     createdAt DateTime  @default(now()) @map("created_at")
     updatedAt DateTime? @updatedAt @map("updated_at")
 
-    lesson Lesson @relation(fields: [lessonId], references: [id])
+    subject Subject @relation(fields: [subjectId], references: [id])
+    quiz    Quiz?   @relation(fields: [quizId], references: [id])
 
-    @@map("chapter")
+    @@map("lesson")
 }
 
 model Quiz {

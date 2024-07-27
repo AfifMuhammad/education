@@ -5,7 +5,6 @@ import { LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
 
 import {
@@ -35,7 +34,6 @@ import { useUploadThing } from "@/hooks/use-uploadthing";
 
 export default function CreateSubjectForm() {
   const { toast } = useToast();
-  const router = useRouter();
   const [open, setOpen] = React.useState<boolean>(false);
   const [image, setImage] = React.useState<string>("");
   const { startUpload, isUploading } = useUploadThing("image", {
@@ -67,7 +65,6 @@ export default function CreateSubjectForm() {
       toast({ title: `Subject "${data.name}" created` });
       form.reset();
       setOpen(false);
-      router.refresh();
     },
     onError: (error) => {
       toast({ variant: "destructive", description: error, title: "Error" });

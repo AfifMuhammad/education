@@ -1,6 +1,5 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import { getAllSubject } from "@/actions/subject/show";
-import SubjectCard from "./subject-card";
+import CardList from "@/components/card-list";
 
 interface Props {
   search?: string;
@@ -10,30 +9,22 @@ const SubjectList = async ({ search }: Props) => {
 
   if (subjects.length > 0) {
     return (
-      <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-        {subjects.map((subject) => (
-          <SubjectCard key={subject.id} subject={subject} />
-        ))}
-      </div>
+      <CardList
+        list={subjects}
+        id="id"
+        name="name"
+        icon="check"
+        href="/admin/subject/[id]"
+        background="image"
+        description="description"
+        title="Subject"
+      />
     );
   } else {
     return <div>Data tidak ditemukan</div>;
   }
 };
 
-SubjectList.Skeleton = function SkeletonBoardList() {
-  return (
-    <div className="grid gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-      <Skeleton className="h-48 w-full" />
-    </div>
-  );
-};
+SubjectList.Skeleton = CardList.Skeleton;
 
 export default SubjectList;

@@ -1,9 +1,9 @@
 import EditSubjectForm from "./_components/edit-subject-form";
 import { getSubject } from "@/actions/subject/show";
 import EditSubjectImageForm from "./_components/edit-subject-image-form";
-import { PageProps } from "@/types";
+import { SubjectPageProps } from "@/types";
 
-export default async function SubjectPage({ params }: PageProps) {
+export default async function SubjectPage({ params }: SubjectPageProps) {
   const subject = await getSubject(params.id);
 
   if (!subject) return <div>Subject not found</div>;

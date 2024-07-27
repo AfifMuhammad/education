@@ -1,5 +1,5 @@
 import { getSubject } from "@/actions/subject/show";
-import { PageProps } from "@/types";
+import { SubjectPageProps } from "@/types";
 import {
   Card,
   CardDescription,
@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import DeleteSubjectButton from "./_components/delete-subject-button";
 
-export default async function AdvancedPage({ params }: PageProps) {
+export default async function AdvancedPage({ params }: SubjectPageProps) {
   const subject = await getSubject(params.id);
   if (!subject) return <div>Subject not found</div>;
   return (

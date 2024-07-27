@@ -38,6 +38,11 @@ declare module "next-auth/jwt" {
   }
 }
 
-export interface PageProps {
-  params: { id: string };
+export interface SubjectPageProps {
+  params: { id: string; lessonId?: string };
 }
+
+export type HeadingType = {
+  id: string;
+  title: string;
+};

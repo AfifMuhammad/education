@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { getSubject } from "@/actions/subject/show";
+import SideNav from "./_components/side-nav";
 
 interface Props {
   children: React.ReactNode;
@@ -13,22 +13,11 @@ export default async function SubjectLayout({ children, params }: Props) {
 
   return (
     <div className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-muted/40 p-4 md:gap-8">
-      <div className="mx-auto grid w-full max-w-6xl gap-2">
+      <div className="mx-auto grid w-full max-w-7xl gap-2">
         <h1 className="text-3xl font-semibold">{subject.name}</h1>
       </div>
-      <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
-        <nav
-          className="grid gap-4 text-sm text-muted-foreground"
-          x-chunk="dashboard-04-chunk-0"
-        >
-          <Link href="#" className="font-semibold text-primary">
-            General
-          </Link>
-          <Link href="#">Lessons</Link>
-          <Link href="#">Quiz</Link>
-          <Link href="#">VLab</Link>
-          <Link href={`/admin/subject/${subject.id}/advanced`}>Advanced</Link>
-        </nav>
+      <div className="mx-auto grid w-full max-w-7xl items-start gap-6 md:grid-cols-[180px_1fr] xl:grid-cols-[250px_1fr_180px]">
+        <SideNav subject={subject} />
         {children}
       </div>
     </div>
