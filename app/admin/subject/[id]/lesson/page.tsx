@@ -1,7 +1,7 @@
 import { getSubject } from "@/actions/subject/show";
 import CardList from "@/components/card-list";
 import { buttonVariants } from "@/components/ui/button";
-import { SubjectPageProps } from "@/types";
+import type { SubjectPageProps } from "@/types";
 import { PlusIcon } from "lucide-react";
 import Link from "next/link";
 import * as React from "react";

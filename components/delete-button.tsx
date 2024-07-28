@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import { LoaderCircle } from "lucide-react";
-import { DefaultValues, useForm } from "react-hook-form";
-import { z } from "zod";
+import { type DefaultValues, useForm } from "react-hook-form";
+import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   AlertDialog,
@@ -21,7 +21,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
 import { useAction } from "@/hooks/use-action";
 import { Form } from "./ui/form";
-import { ActionState } from "@/lib/create-safe-action";
+import type { ActionState } from "@/lib/create-safe-action";
 
 interface Props<T extends z.ZodRawShape> {
   data: DefaultValues<z.infer<z.ZodObject<T>>>;

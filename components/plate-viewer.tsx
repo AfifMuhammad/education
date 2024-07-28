@@ -1,4 +1,4 @@
-import { Plate, Value } from "@udecode/plate-common";
+import { Plate, type Value } from "@udecode/plate-common";
 import { Editor } from "./plate-ui/editor";
 
 interface Props {

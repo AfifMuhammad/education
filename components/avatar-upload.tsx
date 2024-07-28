@@ -25,7 +25,7 @@ export function AvatarUpload({
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      let files: File[] = [];
+      const files: File[] = [];
       for (let i = 0; i < e.target.files.length; i++) {
         files.push(e.target.files[i]);
       }

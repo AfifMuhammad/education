@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
-import { SettingsIcon, LoaderCircle } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 import { useAction } from "@/hooks/use-action";
@@ -28,19 +28,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { DeleteLesson, UpsertLesson } from "@/actions/lesson/schema";
 import { upsertLesson } from "@/actions/lesson/upsert";
-import { Value } from "@udecode/plate-common";
+import type { Value } from "@udecode/plate-common";
 import { useRouter } from "next/navigation";
-import { Lesson } from "@prisma/client";
+import type { Lesson } from "@prisma/client";
 import DeleteButton from "@/components/delete-button";
 import { deleteLesson } from "@/actions/lesson/delete";
 
@@ -164,7 +156,7 @@ export default function LessonForm({ subjectId, lesson }: Props) {
             />
           </CardContent>
           <CardFooter className="border-t px-6 py-4 gap-x-2">
-            {lesson ? <DeleteButton action={deleteLesson} data={lesson!} redirectTo={`/admin/subject/${subjectId}/lesson`} zodObject={DeleteLesson} /> : null}
+            {lesson ? <DeleteButton action={deleteLesson} data={lesson} redirectTo={`/admin/subject/${subjectId}/lesson`} zodObject={DeleteLesson} /> : null}
             <Button type="submit" disabled={isLoading || isUploading}>
               {isLoading ? (
                 <>

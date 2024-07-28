@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import SignInForm from "./_components/sign-in-form";
 

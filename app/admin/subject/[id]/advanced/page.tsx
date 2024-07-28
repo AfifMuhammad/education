@@ -1,5 +1,5 @@
 import { getSubject } from "@/actions/subject/show";
-import { SubjectPageProps } from "@/types";
+import type { SubjectPageProps } from "@/types";
 import {
   Card,
   CardDescription,

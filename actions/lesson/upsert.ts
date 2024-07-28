@@ -1,12 +1,12 @@
 "use server";
-import { z } from "zod";
+import type { z } from "zod";
 
-import { ActionState } from "@/lib/create-safe-action";
+import type { ActionState } from "@/lib/create-safe-action";
 import { auth } from "@/auth";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { UpsertLesson } from "./schema";
 import prisma from "@/lib/db";
-import { Lesson } from "@prisma/client";
+import type { Lesson } from "@prisma/client";
 
 type InputType = z.infer<typeof UpsertLesson>;
 type ReturnType = ActionState<InputType, Lesson>;

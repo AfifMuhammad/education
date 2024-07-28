@@ -1,4 +1,4 @@
-import { HeadingType } from "@/types";
+import type { HeadingType } from "@/types";
 
 interface Props {
   heading: HeadingType;

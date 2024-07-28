@@ -1,6 +1,6 @@
 import * as React from "react";
 import { getSubject } from "@/actions/subject/show";
-import { SubjectPageProps } from "@/types";
+import type { SubjectPageProps } from "@/types";
 import LessonForm from "../_components/lesson-form";
 
 

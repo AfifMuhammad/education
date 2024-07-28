@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { DeleteSubject } from "@/actions/subject/schema";
-import { Subject } from "@prisma/client";
+import type { Subject } from "@prisma/client";
 import { deleteSubject } from "@/actions/subject/delete";
 import DeleteButton from "@/components/delete-button";
 

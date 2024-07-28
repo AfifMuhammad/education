@@ -3,7 +3,7 @@
 import * as React from "react";
 import { LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -25,7 +25,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { UpdateSubjectImage } from "@/actions/subject/schema";
 import { useAction } from "@/hooks/use-action";
-import { Subject } from "@prisma/client";
+import type { Subject } from "@prisma/client";
 import { updateSubjectImage } from "@/actions/subject/update-image";
 import { AvatarUpload } from "@/components/avatar-upload";
 import { useUploadThing } from "@/hooks/use-uploadthing";

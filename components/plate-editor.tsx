@@ -1,11 +1,11 @@
 "use client";
 
 import { withProps } from "@udecode/cn";
-import type { PlateEditor, Value } from "@udecode/plate-common";
+import type { Value } from "@udecode/plate-common";
 import {
   createPlugins,
   Plate,
-  RenderAfterEditable,
+  type RenderAfterEditable,
   PlateLeaf,
 } from "@udecode/plate-common";
 import {

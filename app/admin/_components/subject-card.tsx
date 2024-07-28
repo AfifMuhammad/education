@@ -1,6 +1,6 @@
 import { BookOpenText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Subject } from "@prisma/client";
+import type { Subject } from "@prisma/client";
 import Link from "next/link";
 
 export default function SubjectCard({ subject }: { subject: Subject }) {

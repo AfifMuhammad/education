@@ -3,7 +3,7 @@
 import * as React from "react";
 import { LoaderCircle } from "lucide-react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import type { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -28,7 +28,7 @@ import { Input } from "@/components/ui/input";
 import { UpdateSubject } from "@/actions/subject/schema";
 import { useAction } from "@/hooks/use-action";
 import { updateSubject } from "@/actions/subject/update";
-import { Subject } from "@prisma/client";
+import type { Subject } from "@prisma/client";
 
 interface Props {
   subject: Subject;

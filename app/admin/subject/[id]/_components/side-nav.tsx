@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Subject } from "@prisma/client";
+import type { Subject } from "@prisma/client";
 import { usePathname } from "next/navigation";
 
 interface Props {

@@ -1,10 +1,11 @@
 import * as React from "react";
-import { SubjectPageProps } from "@/types";
+import type { SubjectPageProps } from "@/types";
 import LessonForm from "../_components/lesson-form";
 import { getLesson } from "@/actions/lesson/show";
 
 export default async function LessonPage({ params }: SubjectPageProps) {
-  const lesson = await getLesson(params.lessonId!);
+  if (!params.lessonId) return <div>Lesson not found</div>;
+  const lesson = await getLesson(params.lessonId);
   if (!lesson) return <div>Data not found</div>;
 
   return (

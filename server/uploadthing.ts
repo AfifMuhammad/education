@@ -1,4 +1,4 @@
-import { randomUUID } from "crypto";
+import { randomUUID } from "node:crypto";
 
 import { createUploadthing, UTFiles } from "uploadthing/next";
 import type { FileRouter } from "uploadthing/next";

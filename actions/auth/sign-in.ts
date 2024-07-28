@@ -1,7 +1,7 @@
 "use server";
-import { z } from "zod";
+import type { z } from "zod";
 
-import { ActionState } from "@/lib/create-safe-action";
+import type { ActionState } from "@/lib/create-safe-action";
 import { AuthError } from "next-auth";
 import { signIn } from "@/auth";
 import { createSafeAction } from "@/lib/create-safe-action";

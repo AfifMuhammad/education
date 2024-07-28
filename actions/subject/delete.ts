@@ -1,13 +1,12 @@
 "use server";
-import { z } from "zod";
+import type { z } from "zod";
 
-import { ActionState } from "@/lib/create-safe-action";
+import type { ActionState } from "@/lib/create-safe-action";
 import { auth } from "@/auth";
 import { createSafeAction } from "@/lib/create-safe-action";
 import { DeleteSubject } from "./schema";
 import prisma from "@/lib/db";
-import { Subject } from "@prisma/client";
-import { revalidatePath } from "next/cache";
+import type { Subject } from "@prisma/client";
 
 type InputType = z.infer<typeof DeleteSubject>;
 type ReturnType = ActionState<InputType, Subject>;
