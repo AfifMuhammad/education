@@ -18,3 +18,64 @@
 2024-07-28 01:25:49.421 UTC [1079] LOG:  invalid length of startup packet
 2024-07-28 01:27:46.542 UTC [1897] FATAL:  database "edu" does not exist
 2024-07-28 01:27:46.604 UTC [1908] FATAL:  database "edu" does not exist
+2024-07-28 01:30:20.897 UTC [3828] LOG:  invalid length of startup packet
+2024-07-28 01:30:20.901 UTC [3829] LOG:  invalid length of startup packet
+2024-07-28 01:30:44.620 UTC [1076] LOG:  starting PostgreSQL 14.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 12.3.0, 64-bit
+2024-07-28 01:30:44.621 UTC [1076] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-28 01:30:44.623 UTC [1076] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-07-28 01:30:44.630 UTC [1077] LOG:  database system was interrupted; last known up at 2024-07-28 01:27:46 UTC
+2024-07-28 01:30:44.696 UTC [1077] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-07-28 01:30:44.700 UTC [1077] LOG:  redo starts at 0/17765D8
+2024-07-28 01:30:44.703 UTC [1077] LOG:  invalid record length at 0/17BFA28: wanted 24, got 0
+2024-07-28 01:30:44.703 UTC [1077] LOG:  redo done at 0/17BF9F0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-07-28 01:30:44.734 UTC [1076] LOG:  database system is ready to accept connections
+2024-07-28 01:30:46.373 UTC [1099] LOG:  invalid length of startup packet
+2024-07-28 01:30:46.377 UTC [1100] LOG:  invalid length of startup packet
+2024-07-28 01:31:25.463 UTC [1193] LOG:  starting PostgreSQL 14.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 12.3.0, 64-bit
+2024-07-28 01:31:25.464 UTC [1193] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-28 01:31:25.474 UTC [1193] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-07-28 01:31:25.507 UTC [1194] LOG:  database system was interrupted; last known up at 2024-07-28 01:30:44 UTC
+2024-07-28 01:31:25.588 UTC [1194] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-07-28 01:31:25.592 UTC [1194] LOG:  redo starts at 0/17BFAA0
+2024-07-28 01:31:25.592 UTC [1194] LOG:  invalid record length at 0/17BFAD8: wanted 24, got 0
+2024-07-28 01:31:25.592 UTC [1194] LOG:  redo done at 0/17BFAA0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-07-28 01:31:25.614 UTC [1193] LOG:  database system is ready to accept connections
+2024-07-28 01:31:27.197 UTC [1221] LOG:  invalid length of startup packet
+2024-07-28 01:31:27.206 UTC [1222] LOG:  invalid length of startup packet
+2024-07-28 01:36:15.358 UTC [3045] LOG:  invalid length of startup packet
+2024-07-28 01:36:15.393 UTC [3057] LOG:  invalid length of startup packet
+2024-07-28 01:40:38.430 UTC [4889] LOG:  invalid length of startup packet
+2024-07-28 01:40:38.463 UTC [4891] LOG:  invalid length of startup packet
+2024-07-28 01:45:07.093 UTC [7551] LOG:  invalid length of startup packet
+2024-07-28 01:45:07.131 UTC [7553] LOG:  invalid length of startup packet
+2024-07-28 01:47:32.380 UTC [1194] LOG:  starting PostgreSQL 14.12 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 12.3.0, 64-bit
+2024-07-28 01:47:32.381 UTC [1194] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2024-07-28 01:47:32.384 UTC [1194] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2024-07-28 01:47:32.402 UTC [1196] LOG:  database system was interrupted; last known up at 2024-07-28 01:46:25 UTC
+2024-07-28 01:47:32.490 UTC [1196] LOG:  database system was not properly shut down; automatic recovery in progress
+2024-07-28 01:47:32.493 UTC [1196] LOG:  redo starts at 0/17C0110
+2024-07-28 01:47:32.494 UTC [1196] LOG:  invalid record length at 0/17C01F8: wanted 24, got 0
+2024-07-28 01:47:32.494 UTC [1196] LOG:  redo done at 0/17C01C0 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2024-07-28 01:47:32.514 UTC [1194] LOG:  database system is ready to accept connections
+2024-07-28 01:47:34.828 UTC [1244] LOG:  invalid length of startup packet
+2024-07-28 01:47:34.845 UTC [1245] LOG:  invalid length of startup packet
+2024-07-28 01:51:43.971 UTC [3546] LOG:  invalid length of startup packet
+2024-07-28 01:51:43.982 UTC [3547] LOG:  invalid length of startup packet
+2024-07-28 01:56:23.641 UTC [5397] LOG:  invalid length of startup packet
+2024-07-28 01:56:23.656 UTC [5404] LOG:  invalid length of startup packet
+2024-07-28 02:00:58.016 UTC [8308] LOG:  invalid length of startup packet
+2024-07-28 02:00:58.036 UTC [8310] LOG:  invalid length of startup packet
+2024-07-28 02:05:36.815 UTC [9918] LOG:  invalid length of startup packet
+2024-07-28 02:05:36.841 UTC [9919] LOG:  invalid length of startup packet
+2024-07-28 02:14:31.296 UTC [14789] LOG:  invalid length of startup packet
+2024-07-28 02:14:31.321 UTC [14790] LOG:  invalid length of startup packet
+2024-07-28 02:32:35.530 UTC [20735] LOG:  invalid length of startup packet
+2024-07-28 02:32:35.564 UTC [20737] LOG:  invalid length of startup packet
+2024-07-28 02:46:27.960 UTC [26922] LOG:  invalid length of startup packet
+2024-07-28 02:46:27.982 UTC [26924] LOG:  invalid length of startup packet
+2024-07-28 02:50:43.008 UTC [28193] LOG:  invalid length of startup packet
+2024-07-28 02:50:43.029 UTC [28195] LOG:  invalid length of startup packet
+2024-07-28 02:55:28.893 UTC [30864] LOG:  invalid length of startup packet
+2024-07-28 02:55:28.909 UTC [30870] LOG:  invalid length of startup packet
+2024-07-28 02:57:22.993 UTC [32295] LOG:  invalid length of startup packet
+2024-07-28 02:57:23.001 UTC [32297] LOG:  invalid length of startup packet

@@ -3,8 +3,8 @@
     "id": "clz4uczsx00010cll6l724jul",
     "name": "admin",
     "email": "admin@admin.com",
-    "emailVerified": "2024-07-27 12:39:47",
-    "password": "$2a$11$L2gbIDcQb2NFvYgb4JYwaOGXzdHaSIuFt0Bpx6Ggu4u553WaAwR1G",
+    "emailVerified": "2024-07-27 12:39:47.000",
+    "password": "$2a$11$VKIFJstmLsKWtkuv5Cdp7eSiK7Um8utv/CXm8tTxk/sO7Jc4Evh32",
     "createdAt": "2024-07-27 12:39:47",
     "updatedAt": "2024-07-27 12:39:47"
   }

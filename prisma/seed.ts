@@ -11,10 +11,10 @@ async function main() {
         id: admin.id,
         name: admin.name,
         email: admin.email,
-        emailVerified: admin.emailVerified,
+        emailVerified: new Date(admin.emailVerified),
         password: admin.password,
-        createdAt: admin.createdAt,
-        updatedAt: admin.updatedAt,
+        createdAt: new Date(admin.createdAt),
+        updatedAt: new Date(admin.updatedAt),
       },
     });
   });

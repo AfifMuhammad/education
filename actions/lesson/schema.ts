@@ -9,3 +9,7 @@ export const UpsertLesson = z.object({
   content: z.string(),
   subjectId: z.string(),
 });
+
+export const DeleteLesson = z.object({
+  id: z.string({ required_error: "Id is required" }),
+});
